@@ -3,6 +3,7 @@
 To build a Streamlit-based interactive dashboard that extracts, stores, and analyzes data of Near-Earth Objects (asteroids) using NASA's public API. The goal is to understand the behavior, velocity, and hazard levels of asteroids approaching Earth.
 
 🧱 Step-by-Step Development Process
+
 Step 1: Extract Data from NASA API
 ----> API Used: NASA NeoWs Feed API
 ----> Request Format:
@@ -11,11 +12,13 @@ plaintext
 Copy
 Edit
 https://api.nasa.gov/neo/rest/v1/feed?start_date=YYYY-MM-DD&end_date=YYYY-MM-DD&api_key=YOUR_KEY
+
 Purpose: To fetch asteroid data over a weekly window.
 
 ----> Error Handling: Safely handles missing or malformed fields from the API.
 
 Step 2: Data Cleaning and Structuring
+
 Fields extracted include:
 
 ----> Asteroid ID, name, magnitude
@@ -33,6 +36,7 @@ Fields extracted include:
 ----> Data is stored as a list of dictionaries for easy conversion to a DataFrame.
 
 Step 3: Store Data in SQLite
+
 Two main tables:
 
 ----> asteroids: contains general info like size, name, magnitude, hazard level.
@@ -63,6 +67,7 @@ Visualizations:
 Download filtered data as CSV.
 
 Step 5: Enhance User Interface
+
 Layout set to "wide" using st.set_page_config().
 
 ----> Columns used to place sliders side-by-side.
